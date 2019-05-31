@@ -7,6 +7,7 @@ let output = `  <div>
                 <input type="text" placeholder=" option c" class="question" />
                 <input type="text" placeholder=" option d" class="question" />
                 <input type="text" placeholder=" correct answer" class="question" />
+                <input type="number" placeholder=" Marks for this question" class="question" />
                 <br/>
                 <br/>
                 <hr/>
@@ -30,20 +31,10 @@ function nyfunc() {
     }
   }
 
-//   var res= names.reduce(function(result, item, index ) {
-//     result[index] = item; //a, b, c
-//     return result;
-//   }, {});
-
-//  console.log(res);
-//  var res1=JSON.stringify(res);
-//  console.log(res1)
-// var res2=JSON.parse(res1)
-// console.log(res2)
 
 fetch("/postQuestion", {
     method: "POST",
-    body :res1,
+    body :JSON.stringify(names),
     headers: {     
       "Content-Type": " application/json"
     }
@@ -51,7 +42,7 @@ fetch("/postQuestion", {
   )
     .then(res => res.json())
     .then(data => {
-      console.log(data.msg);
+      document.getElementById('msgholder').innerHTML = data.msg;
     })
     .catch(err => {
       console.log(err);
