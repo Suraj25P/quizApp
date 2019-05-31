@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>ADMIN PAGE</title>
+    <script src="/static/index.js"></script>
+  </head>
+  <body>
+    <div>
+      <div>
+        <input type="number" class="question" placeholder="QuizID" />
+        <input  class="question" type="number"placeholder="Number of Questions" onchange="getTemplate()" id="no" />
+        <input type="number" class="question" placeholder="Marks/Question" />
+      </div>
+      <br />
+      <hr />
+      <div id="questionHolder"></div>
+      <button onclick="nyfunc()">UPLOAD</button>
+    </div>
+  </body>
+</html>
