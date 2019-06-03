@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Quiz App</title>
+    <script src="/static/index.js"></script>
   </head>
   <body>
     <div>
       <form action="/next" method="POST">
-        <input type="text" placeholder="Enter Username" name="uname" />
+        <input type="text" id="sid" placeholder="Enter Username" name="uname" />
         <input type="password" placeholder="Enter Password" name="psw" />
         <input type="radio" name="grp" value="Admin" /> Admin<br />
         <input type="radio" name="grp" value="User" /> User<br />
